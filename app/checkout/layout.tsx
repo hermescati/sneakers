@@ -4,7 +4,7 @@ import { Quicksand } from "next/font/google";
 const inter = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sneakers",
+  title: "Checkout",
 };
 
 export default function RootLayout({
