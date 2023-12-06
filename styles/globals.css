@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilties;
+@tailwind utilities;
 
-.logo {
+/* .logo {
   line-height: normal;
   font-size: 1.25rem;
   font-weight: 700;
@@ -54,7 +54,7 @@
   line-height: normal;
   font-size: 0.5rem;
   font-weight: 500;
-}
+} */
 
 /* :root {
   --max-width: 1100px;
