@@ -4,6 +4,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import Button from "./Button";
+import InputField from "./InputField";
 
 export default function Footer() {
   const footerNavs = [
@@ -91,10 +92,12 @@ export default function Footer() {
             </p>{" "}
             <form onSubmit={(e) => e.preventDefault()}>
               <div className="flex gap-3 items-center border rounded-md p-1">
-                <input
-                  className="hidden md:block pl-12 py-2 text-sm  border border-gray-300 rounded-[50px] "
-                  type="text"
-                  placeholder="Your text here"
+                <InputField
+                  intent="default"
+                  placeholder="Type here"
+                  onChange={() => {
+                    console.log("kot");
+                  }}
                 />
 
                 <Button
