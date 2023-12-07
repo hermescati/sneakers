@@ -7,6 +7,11 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    variants: {
+      extend: {
+        opacity: ["disabled"],
+      },
+    },
     colors: {
       transparent: "transparent",
       black: "#000",
