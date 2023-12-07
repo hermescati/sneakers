@@ -5,21 +5,18 @@ import { FaFacebook } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import Button from "./Button";
 
-export default () => {
+export default function Footer() {
   const footerNavs = [
     {
       label: "About",
       items: [
         {
-          href: "javascript:void()",
           name: "Our Mission",
         },
         {
-          href: "javascript:void()",
           name: "Authenticity",
         },
         {
-          href: "javascript:void()",
           name: "Journal",
         },
       ],
@@ -28,19 +25,15 @@ export default () => {
       label: "Support",
       items: [
         {
-          href: "javascript:void()",
           name: "Track Your Order",
         },
         {
-          href: "javascript:void()",
           name: "Delivery & Returns",
         },
         {
-          href: "javascript:void()",
           name: "FAQs",
         },
         {
-          href: "javascript:void()",
           name: "International Payments",
         },
       ],
@@ -56,12 +49,9 @@ export default () => {
               <h2 className="text-gray-800 font-bold ">{item.label}</h2>
               {item.items.map((el, idx) => (
                 <li key={idx}>
-                  <a
-                    href={el.href}
-                    className="hover:underline hover:text-indigo-600"
-                  >
+                  <p className="hover:underline hover:text-indigo-600">
                     {el.name}
-                  </a>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -133,4 +123,4 @@ export default () => {
       </div>
     </footer>
   );
-};
+}

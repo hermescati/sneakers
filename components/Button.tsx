@@ -52,14 +52,14 @@ interface ButtonProps extends VariantProps<typeof buttonStyles> {
   onClick: () => void;
 }
 
-const Button = ({
+export default function Button({
   children,
   intent,
   size,
   content,
   disabled,
   onClick,
-}: ButtonProps) => {
+}: ButtonProps) {
   return (
     <button
       type="button"
@@ -70,6 +70,4 @@ const Button = ({
       {children}
     </button>
   );
-};
-
-export default Button;
+}
