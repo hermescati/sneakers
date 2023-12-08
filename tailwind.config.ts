@@ -28,6 +28,15 @@ const config: Config = {
         900: "#212427",
       },
     },
+    fontSize: {
+      logo: "1.25rem",
+      h1: "2.5rem",
+      h2: "2rem",
+      h3: "1.5rem",
+      h4: "1rem",
+      span: "0.85rem",
+      p: "0.75rem",
+    },
     extend: {
       colors: {
         accent: "#FD844A",
