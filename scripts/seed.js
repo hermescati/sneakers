@@ -61,7 +61,7 @@ async function seedProducts(client) {
             release_year INTEGER NOT NULL,
             retail_price NUMERIC NOT NULL,
             resell_price NUMERIC NOT NULL,
-            image TEXT NOT NULL
+            image TEXT[] NOT NULL
         );
       `;
 
