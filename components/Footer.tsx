@@ -4,7 +4,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import Button from "./Button";
-import InputField from "./InputField";
+import InputField from "./Input/InputField";
 
 export default function Footer() {
   const footerNavs = [
@@ -92,21 +92,9 @@ export default function Footer() {
             </p>{" "}
             <form onSubmit={(e) => e.preventDefault()}>
               <div className="flex gap-3 items-center border rounded-md p-1">
-                <InputField
-                  intent="default"
-                  placeholder="Type here"
-                  onChange={() => {
-                    console.log("kot");
-                  }}
-                />
+                <InputField intent="text" placeholder="Email Address" />
 
-                <Button
-                  intent="secondary"
-                  size="small"
-                  onClick={function (): void {
-                    throw new Error("Function not implemented.");
-                  }}
-                >
+                <Button intent="secondary" size="default">
                   Sign Up
                 </Button>
               </div>
