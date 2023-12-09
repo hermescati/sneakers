@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import CardGrid from "@/components/Products/CardGrid";
+
+export const metadata: Metadata = {
+  title: "Buy Sneakers",
+};
 
 export default function Sneakers() {
   return (

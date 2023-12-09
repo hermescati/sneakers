@@ -1,13 +1,14 @@
 import { cva, VariantProps } from "class-variance-authority";
 
 const inputStyles = cva(
-  "w-full border-2 leading-none font-medium placeholder:opacity-60 focus:outline-none focus:ring focus:ring-offset-0 focus:ring-accent focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all ease-in-out duration-300",
+  "w-full border-2 leading-none font-medium focus:outline-none focus:ring focus:ring-offset-0 focus:ring-accent focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all ease-in-out duration-300",
   {
     variants: {
       intent: {
         text: [
           "border-gray-600",
           "text-gray-600",
+          "placeholder:text-gray-600",
           "focus:border-gray-800",
           "focus:text-gray-800",
         ],
@@ -64,7 +65,7 @@ export default function InputField({
         type={`${intent}`}
         value={value}
         placeholder={placeholder}
-        className={inputStyles({ intent, size })}
+        className={`bg-transparent + ${inputStyles({ intent, size })}`}
         min={min}
         max={max}
         disabled={disabled}

@@ -6,7 +6,7 @@ import Logo from "./Logo";
 import Profile from "./Profile";
 import Link from "next/link";
 
-export default function NavBar() {
+export default function Navbar() {
   return (
     <nav className="bg-white flex mt-2 space-x-4">
       <Link href={"/"}>
