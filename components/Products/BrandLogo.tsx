@@ -1,3 +1,4 @@
+import { Product } from "@/app/lib/definitions";
 import {
   SiNike,
   SiJordan,
@@ -5,7 +6,6 @@ import {
   SiPuma,
   SiAdidas,
 } from "react-icons/si";
-import { Product } from "@/app/lib/definitions";
 
 interface Props {
   product: Product;

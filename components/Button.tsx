@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { ReactNode } from "react";
 
 const buttonStyles = cva(
-  "flex items-center gap-2 w-full font-bold disabled:opacity-50 disabled:cursor-not-allowed",
+  "flex items-center gap-2 w-full font-bold disabled:opacity-50 disabled:cursor-not-allowed transition-all ease-in-out duration-300",
   {
     variants: {
       intent: {
@@ -42,6 +42,7 @@ const buttonStyles = cva(
     defaultVariants: {
       intent: "primary",
       size: "default",
+      content: "center",
     },
   }
 );
@@ -49,7 +50,6 @@ const buttonStyles = cva(
 interface ButtonProps extends VariantProps<typeof buttonStyles> {
   children: ReactNode;
   disabled?: boolean;
-  onClick: () => void;
 }
 
 export default function Button({
@@ -58,14 +58,12 @@ export default function Button({
   size,
   content,
   disabled,
-  onClick,
 }: ButtonProps) {
   return (
     <button
       type="button"
       className={buttonStyles({ intent, size, content })}
       disabled={disabled}
-      onClick={onClick}
     >
       {children}
     </button>
