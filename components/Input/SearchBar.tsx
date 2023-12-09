@@ -34,7 +34,7 @@ export default function SearchBar({
         type="text"
         value={value}
         placeholder={placeholder}
-        className="w-full leading-none font-medium placeholder:opacity-60 outline-none"
+        className="w-full leading-none font-medium placeholder:opacity-60 outline-none bg-transparent"
         disabled={disabled}
         onFocus={handleFocus}
         onBlur={handleBlur}

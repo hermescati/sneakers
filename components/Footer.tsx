@@ -80,8 +80,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-300 p-8">
-      <div className="flex flex-col gap-12 w-full md:mx-auto md:w-11/12 lg:w-10/12">
+    <footer className="bg-gray-300 p-8 lg:px-0">
+      <div className="flex flex-col gap-8 w-full md:mx-auto md:w-11/12 lg:w-10/12">
         {/* Footer Items */}
         <div className="flex flex-wrap gap-y-8 gap-x-12 justify-between">
           {/* Links */}
@@ -150,8 +150,8 @@ export default function Footer() {
           </div>
         </div>
         {/* Copyrights */}
-        <span className="bg-gray-600 w-full h-px rounded-sm"></span>
-        <div className="flex flex-wrap gap-6 justify-between text-gray-700 text-span font-semibold">
+        <span className="bg-gray-400 w-full h-px rounded-sm"></span>
+        <div className="flex flex-wrap gap-4 justify-between text-gray-700 text-span font-semibold">
           <div className="flex items-center gap-2">
             <p>Privacy Policy</p>
             <span className="w-1 h-1 rounded-sm bg-gray-700" />
