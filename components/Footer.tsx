@@ -85,13 +85,13 @@ export default function Footer() {
         {/* Footer Items */}
         <div className="flex flex-wrap gap-y-8 gap-x-12 justify-between">
           {/* Links */}
-          {footerLinks.map((item) => (
-            <ul className="flex flex-col gap-3">
+          {footerLinks.map((item, key) => (
+            <ul key={key} className="flex flex-col gap-3">
               <h2 className="text-logo text-gray-900 font-bold">
                 {item.header}
               </h2>
-              {item.links.map((item) => (
-                <li>
+              {item.links.map((item, key) => (
+                <li key={key}>
                   <Link href={item.href}>
                     <span className="text-span text-gray-700 font-semibold">
                       {item.name}
@@ -107,14 +107,12 @@ export default function Footer() {
               {socialMedia.header}
             </h2>
             <div className="flex gap-4">
-              {socialMedia.links.map((item) => (
-                <li>
-                  <Link href={item.href}>
-                    <span className="text-span text-gray-700 font-semibold">
-                      {item.platform}
-                    </span>
-                  </Link>
-                </li>
+              {socialMedia.links.map((item, key) => (
+                <Link key={key} href={item.href}>
+                  <span className="text-span text-gray-700 font-semibold">
+                    {item.platform}
+                  </span>
+                </Link>
               ))}
             </div>
           </ul>
