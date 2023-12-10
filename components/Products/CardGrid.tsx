@@ -1,9 +1,11 @@
-import { fetchProducts } from "@/app/lib/data";
 import Card from "./Card";
+import { Product } from "@/app/lib/definitions";
 
-export default async function CardGrid() {
-  const products = await fetchProducts();
+interface Props {
+  products: Product[];
+}
 
+export default function CardGrid({ products }: Props) {
   return (
     <div className="flex xs:mx-auto">
       <div className="flex flex-wrap">

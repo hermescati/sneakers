@@ -14,7 +14,7 @@ export default function Card({ product }: Props) {
     <div className="p-4">
       <Link
         key={product.sku}
-        href={`/sneakers/${product.sku}`}
+        href={`/shopping/${product.sku}`}
         className="min-w-0"
       >
         <article className="relative flex flex-col gap-1 p-4 w-full h-full rounded-3xl hover:scale-105 hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] transition-all ease-in-out duration-300">
@@ -36,9 +36,9 @@ export default function Card({ product }: Props) {
             />
           </div>
           <div className="flex flex-col">
-            <div className="flex gap-2">
-              <BrandLogo product={product} color="gray" />
-              <p className="text-gray-600 text-p font-semibold">
+            <div className="flex gap-1 items-center opacity-60">
+              <BrandLogo product={product} size={16} />
+              <p className="text-gray-900 text-p font-semibold leading-none">
                 {product.model}
               </p>
             </div>
