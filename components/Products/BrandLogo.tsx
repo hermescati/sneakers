@@ -1,25 +1,30 @@
+import Image from "next/image";
 import { Product } from "@/app/lib/definitions";
-import {
-  SiNike,
-  SiJordan,
-  SiNewbalance,
-  SiPuma,
-  SiAdidas,
-} from "react-icons/si";
+import Adidas from "@/public/assets/brands/adidas.svg";
+import Jordan from "@/public/assets/brands/jordan.svg";
+import NewBalance from "@/public/assets/brands/new-balance.svg";
+import Nike from "@/public/assets/brands/nike.svg";
+import Yeezy from "@/public/assets/brands/yeezy.svg";
+import Puma from "@/public/assets/brands/puma.svg";
 
 interface Props {
   product: Product;
-  size?: number;
-  color?: string;
+  size: number;
 }
 
-export const BrandLogo = ({ product, size, color }: Props) => {
-  const style = { color: color, fontSize: size };
-
-  if (product.brand == "Nike") return <SiNike style={style} />;
-  if (product.brand == "Jordan") return <SiJordan style={style} />;
-  if (product.brand == "New Balance") return <SiNewbalance style={style} />;
-  if (product.brand == "Puma") return <SiPuma style={style} />;
-  if (product.brand == "Adidas" || product.brand == "Yeezy")
-    return <SiAdidas style={style} />;
+export const BrandLogo = ({ product, size }: Props) => {
+  if (product.brand == "Nike")
+    return <Image src={Nike} width={size} height={size} alt="nike" />;
+  if (product.brand == "Jordan")
+    return <Image src={Jordan} width={size} height={size} alt="jordan" />;
+  if (product.brand == "New Balance")
+    return (
+      <Image src={NewBalance} width={size} height={size} alt="new-balance" />
+    );
+  if (product.brand == "Puma")
+    return <Image src={Puma} width={size} height={size} alt="puma" />;
+  if (product.brand == "Adidas")
+    return <Image src={Adidas} width={size} height={size} alt="adidas" />;
+  if (product.brand == "Yeezy")
+    return <Image src={Yeezy} width={size} height={size} alt="yeezy" />;
 };
