@@ -14,7 +14,7 @@ export default function Card({ product }: Props) {
     <div className="p-4">
       <Link
         key={product.sku}
-        href={`/sneakers/${product.sku}`}
+        href={`/shopping/${product.sku}`}
         className="min-w-0"
       >
         <article className="relative flex flex-col gap-1 p-4 w-full h-full rounded-3xl hover:scale-105 hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] transition-all ease-in-out duration-300">
