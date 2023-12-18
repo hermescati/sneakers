@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/app/lib/definitions";
 import { BrandLogo } from "./BrandLogo";
-import Cart from "@/public/assets/icons/shopping-cart.svg";
+import Cart from "@/components/SVGs/icons/shopping-cart.svg";
 
 interface Props {
   product: Product;

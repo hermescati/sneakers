@@ -1,5 +1,5 @@
 import React from "react";
-import Cart from "@/public/assets/icons/shopping-cart.svg";
+import Cart from "@/components/SVGs/icons/shopping-cart.svg";
 
 export default function ShoppingCart() {
   return (

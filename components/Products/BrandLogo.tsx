@@ -1,10 +1,10 @@
 import { Product } from "@/app/lib/definitions";
-import Adidas from "@/public/assets/brands/adidas.svg";
-import Jordan from "@/public/assets/brands/jordan.svg";
-import NewBalance from "@/public/assets/brands/new-balance.svg";
-import Nike from "@/public/assets/brands/nike.svg";
-import Yeezy from "@/public/assets/brands/yeezy.svg";
-import Puma from "@/public/assets/brands/puma.svg";
+import Adidas from "@/components/SVGs/brands/adidas.svg";
+import Jordan from "@/components/SVGs/brands/jordan.svg";
+import NewBalance from "@/components/SVGs/brands/new-balance.svg";
+import Nike from "@/components/SVGs/brands/nike.svg";
+import Yeezy from "@/components/SVGs/brands/yeezy.svg";
+import Puma from "@/components/SVGs/brands/puma.svg";
 
 interface Props {
   product: Product;

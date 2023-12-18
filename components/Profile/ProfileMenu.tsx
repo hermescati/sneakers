@@ -1,4 +1,4 @@
-import Profile from "@/public/assets/icons/profile-icon.svg";
+import Profile from "@/components/SVGs/icons/profile-icon.svg";
 
 export default function ProfileMenu() {
   return (
