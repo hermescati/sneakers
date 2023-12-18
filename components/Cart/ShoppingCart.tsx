@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Cart from "@/public/assets/icons/shopping-cart.svg";
 
 export default function ShoppingCart() {

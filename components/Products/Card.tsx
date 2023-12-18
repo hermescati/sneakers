@@ -30,9 +30,9 @@ export default function Card({ product }: Props) {
             />
           </div>
           <div className="flex flex-col">
-            <div className="flex gap-1 items-center opacity-60">
-              <BrandLogo product={product} size={16} />
-              <p className="text-gray-900 text-p font-semibold leading-none">
+            <div className="flex gap-1 items-center">
+              <BrandLogo product={product} size={16} color="gray-600" />
+              <p className="text-gray-600 text-p font-semibold leading-none">
                 {product.model}
               </p>
             </div>

@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { LuSearch } from "react-icons/lu";
+import SearchIcon from "@/public/assets/icons/search.svg";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -29,7 +31,7 @@ export default function SearchBar({
           : "border-gray-400 text-gray-400"
       }`}
     >
-      <LuSearch className="absolute top-3.5 left-4" size={"1rem"} />
+      <SearchIcon className="absolute top-3.5 left-4" width={16} height={16} />
       <input
         type="text"
         value={value}

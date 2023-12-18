@@ -1,8 +1,5 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import SearchBar from "./Input/SearchBar";
 import Logo from "./Logo";
 import ProfileMenu from "./Profile/ProfileMenu";
@@ -23,7 +20,7 @@ export default function Navbar() {
         <ProfileMenu />
       </div>
       <div className="block sm:hidden">
-        <Image src={Menu} width={32} height={32} alt="menu" />
+        <Menu className="text-gray-800" width={32} height={32} />
       </div>
     </nav>
   );
