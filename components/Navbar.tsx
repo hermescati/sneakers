@@ -1,13 +1,10 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import SearchBar from "./Input/SearchBar";
 import Logo from "./Logo";
 import ProfileMenu from "./Profile/ProfileMenu";
 import ShoppingCart from "./Cart/ShoppingCart";
-import Menu from "@/public/assets/icons/menu.svg";
+import Menu from "@/components/SVGs/icons/menu.svg";
 
 export default function Navbar() {
   return (
@@ -23,7 +20,7 @@ export default function Navbar() {
         <ProfileMenu />
       </div>
       <div className="block sm:hidden">
-        <Image src={Menu} width={32} height={32} alt="menu" />
+        <Menu className="text-gray-800" width={32} height={32} />
       </div>
     </nav>
   );

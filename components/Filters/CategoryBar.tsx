@@ -1,88 +1,78 @@
 "use client";
 
-import Checkbox from "@/public/assets/icons/checkmark.svg";
-import Calendar from "@/public/assets/icons/calendar.svg";
-import Discount from "@/public/assets/icons/discount.svg";
-import Adidas from "@/public/assets/brands/adidas.svg";
-import Jordan from "@/public/assets/brands/jordan.svg";
-import NewBalance from "@/public/assets/brands/new-balance.svg";
-import Nike from "@/public/assets/brands/nike.svg";
-import Yeezy from "@/public/assets/brands/yeezy.svg";
-
 import CategoryItem from "./CategoryItem";
 import { useState } from "react";
+import Checkbox from "@/components/SVGs/icons/checkmark.svg";
+import Calendar from "@/components/SVGs/icons/calendar.svg";
+import Discount from "@/components/SVGs/icons/discount.svg";
+import Adidas from "@/components/SVGs/brands/adidas.svg";
+import Jordan from "@/components/SVGs/brands/jordan.svg";
+import NewBalance from "@/components/SVGs/brands/new-balance.svg";
+import Nike from "@/components/SVGs/brands/nike.svg";
+import Yeezy from "@/components/SVGs/brands/yeezy.svg";
 
 export default function CategoryBar() {
-  const [activeItem, setActiveItem] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState(0);
+  const iconSize = 24;
 
-  const filterItems = [
+  const categorycategorys = [
     {
       id: 0,
-      icon: Checkbox,
-      category: "All Sneakers",
-      alt: "all",
+      name: "All Sneakers",
+      icon: <Checkbox width={iconSize} height={24} />,
     },
     {
       id: 1,
-      icon: Calendar,
-      category: "New Releases",
-      alt: "new",
+      name: "New Releases",
+      icon: <Calendar width={iconSize} height={24} />,
     },
     {
       id: 2,
-      icon: Discount,
-      category: "Below Retail",
-      alt: "retail",
+      name: "Below Retail",
+      icon: <Discount width={iconSize} height={24} />,
     },
     {
       id: 3,
-      icon: Nike,
-      category: "Nike",
-      alt: "nike",
+      name: "Nike",
+      icon: <Nike width={iconSize} height={24} />,
     },
     {
       id: 4,
-      icon: Jordan,
-      category: "Jordan",
-      alt: "jordan",
+      name: "Jordan",
+      icon: <Jordan width={iconSize} height={24} />,
     },
     {
       id: 5,
-      icon: Yeezy,
-      category: "Yeezy",
-      alt: "yeezy",
+      name: "Yeezy",
+      icon: <Yeezy width={iconSize} height={24} />,
     },
     {
       id: 6,
-      icon: Adidas,
-      category: "Adidas",
-      alt: "adidas",
+      name: "Adidas",
+      icon: <Adidas width={iconSize} height={24} />,
     },
     {
       id: 7,
-      icon: NewBalance,
-      category: "New Balance",
-      alt: "new-balance",
+      name: "New Balance",
+      icon: <NewBalance width={iconSize} height={24} />,
     },
   ];
 
-  const handleItemClick = (item: number) => {
-    setActiveItem(item);
+  const handlecategoryClick = (category: number) => {
+    setSelectedCategory(category);
   };
 
   return (
     <div className="flex gap-8 w-full">
-      {filterItems.map((item) => (
+      {categorycategorys.map((category) => (
         <CategoryItem
-          key={item.id}
-          name={item.category}
-          src={item.icon}
-          alt={item.alt}
-          width={24}
-          height={24}
-          isActive={activeItem == item.id}
-          onSelect={() => handleItemClick(item.id)}
-        />
+          key={category.id}
+          name={category.name}
+          isActive={selectedCategory == category.id}
+          onSelect={() => handlecategoryClick(category.id)}
+        >
+          {category.icon}
+        </CategoryItem>
       ))}
     </div>
   );

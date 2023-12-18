@@ -1,30 +1,30 @@
-import Image from "next/image";
 import { Product } from "@/app/lib/definitions";
-import Adidas from "@/public/assets/brands/adidas.svg";
-import Jordan from "@/public/assets/brands/jordan.svg";
-import NewBalance from "@/public/assets/brands/new-balance.svg";
-import Nike from "@/public/assets/brands/nike.svg";
-import Yeezy from "@/public/assets/brands/yeezy.svg";
-import Puma from "@/public/assets/brands/puma.svg";
+import Adidas from "@/components/SVGs/brands/adidas.svg";
+import Jordan from "@/components/SVGs/brands/jordan.svg";
+import NewBalance from "@/components/SVGs/brands/new-balance.svg";
+import Nike from "@/components/SVGs/brands/nike.svg";
+import Yeezy from "@/components/SVGs/brands/yeezy.svg";
+import Puma from "@/components/SVGs/brands/puma.svg";
 
 interface Props {
   product: Product;
   size: number;
+  color: string;
 }
 
-export const BrandLogo = ({ product, size }: Props) => {
+export const BrandLogo = ({ product, size, color }: Props) => {
   if (product.brand == "Nike")
-    return <Image src={Nike} width={size} height={size} alt="nike" />;
+    return <Nike className={`text-${color}`} width={size} height={size} />;
   if (product.brand == "Jordan")
-    return <Image src={Jordan} width={size} height={size} alt="jordan" />;
+    return <Jordan className={`text-${color}`} width={size} height={size} />;
   if (product.brand == "New Balance")
     return (
-      <Image src={NewBalance} width={size} height={size} alt="new-balance" />
+      <NewBalance className={`text-${color}`} width={size} height={size} />
     );
   if (product.brand == "Puma")
-    return <Image src={Puma} width={size} height={size} alt="puma" />;
+    return <Puma className={`text-${color}`} width={size} height={size} />;
   if (product.brand == "Adidas")
-    return <Image src={Adidas} width={size} height={size} alt="adidas" />;
+    return <Adidas className={`text-${color}`} width={size} height={size} />;
   if (product.brand == "Yeezy")
-    return <Image src={Yeezy} width={size} height={size} alt="yeezy" />;
+    return <Yeezy className={`text-${color}`} width={size} height={size} />;
 };

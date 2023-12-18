@@ -1,31 +1,21 @@
-import Image from "next/image";
-import { useState } from "react";
+import { ReactNode } from "react";
 
 interface CategoryItemProps {
   name: string;
-  src: any;
-  alt: string;
-  width?: number;
-  height?: number;
   isActive: boolean;
+  children: ReactNode;
   onSelect: () => void;
 }
 
 export default function CategoryItem({
   name,
-  src,
-  alt,
-  width,
-  height,
   isActive,
+  children,
   onSelect,
 }: CategoryItemProps) {
   const handleOnChange = () => {
     onSelect();
   };
-
-  const opacity = isActive ? 100 : 60;
-  const hidden = isActive ? 100 : 0;
 
   return (
     <label className="flex flex-col gap-2 cursor-pointer">
@@ -36,14 +26,17 @@ export default function CategoryItem({
         checked={isActive}
       />
       <div
-        className={`flex flex-col gap-2 px-1 items-center justify-center opacity-${opacity} hover:opacity-100`}
+        className={`flex flex-col gap-2 px-1 items-center justify-center font-semibold ${
+          isActive ? "text-gray-900" : "text-gray-600 hover:text-gray-900"
+        }`}
       >
-        <Image src={src} width={width} height={height} alt={alt} />
-        <span className="text-gray-900 text-span font-bold">{name}</span>
+        {children}
+        <span className="text-span">{name}</span>
       </div>
       <span
-        className={`w-full h-0.5 bg-gray-900 rounded-sm`}
-        style={{ opacity: hidden }}
+        className={`w-full h-0.5 bg-gray-900 rounded-sm ${
+          isActive ? "" : "hidden"
+        }`}
       />
     </label>
   );
