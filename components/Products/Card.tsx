@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/app/lib/definitions";
 import { BrandLogo } from "./BrandLogo";
-import cart from "@/public/assets/icons/cart-dark.svg";
+import Cart from "@/public/assets/icons/shopping-cart.svg";
 
 interface Props {
   product: Product;
@@ -18,13 +18,7 @@ export default function Card({ product }: Props) {
         className="min-w-0"
       >
         <article className="relative flex flex-col gap-1 p-4 w-full h-full rounded-3xl hover:scale-105 hover:shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] transition-all ease-in-out duration-300">
-          <Image
-            className="absolute"
-            src={cart}
-            width={24}
-            height={24}
-            alt={"add-to-cart"}
-          />
+          <Cart className="text-gray-800" width={24} height={24} />
           <div className="w-full">
             <Image
               src={product.image[0]}
