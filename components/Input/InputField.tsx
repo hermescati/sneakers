@@ -35,7 +35,7 @@ const inputStyles = cva(
       intent: "text",
       size: "default",
     },
-  }
+  },
 );
 interface InputFieldProps extends VariantProps<typeof inputStyles> {
   placeholder?: string;

@@ -45,7 +45,7 @@ const buttonStyles = cva(
       size: "default",
       content: "center",
     },
-  }
+  },
 );
 
 interface ButtonProps extends VariantProps<typeof buttonStyles> {
