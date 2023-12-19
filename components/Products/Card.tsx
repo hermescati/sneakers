@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Cart from "@/components/SVGs/icons/shopping-cart.svg";
+import Cart from "@/components/svgs/icons/shopping-cart.svg";
 import { BrandLogo } from "./BrandLogo";
 import type { Product } from "@/app/lib/definitions";
 

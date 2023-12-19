@@ -1,4 +1,4 @@
-declare module "@/components/SVGs/brands/*.svg" {
+declare module "@/components/svgs/brands/*.svg" {
   import type React from "react";
 
   const Component: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
@@ -6,7 +6,7 @@ declare module "@/components/SVGs/brands/*.svg" {
   export default Component;
 }
 
-declare module "@/components/SVGs/icons/*.svg" {
+declare module "@/components/svgs/icons/*.svg" {
   import type React from "react";
 
   const Component: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
