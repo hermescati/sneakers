@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Menu from "@/components/SVGs/icons/menu.svg";
+import Menu from "@/components/svgs/icons/menu.svg";
 import SearchBar from "./Input/SearchBar";
 import Logo from "./Logo";
 import ProfileMenu from "./Profile/ProfileMenu";
