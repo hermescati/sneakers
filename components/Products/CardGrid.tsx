@@ -1,5 +1,5 @@
 import Card from "./Card";
-import { Product } from "@/app/lib/definitions";
+import type { Product } from "@/app/lib/definitions";
 
 interface Props {
   products: Product[];

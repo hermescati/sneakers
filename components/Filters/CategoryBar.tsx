@@ -1,15 +1,15 @@
 "use client";
 
-import CategoryItem from "./CategoryItem";
 import { useState } from "react";
-import Checkbox from "@/components/SVGs/icons/checkmark.svg";
-import Calendar from "@/components/SVGs/icons/calendar.svg";
-import Discount from "@/components/SVGs/icons/discount.svg";
-import Adidas from "@/components/SVGs/brands/adidas.svg";
-import Jordan from "@/components/SVGs/brands/jordan.svg";
-import NewBalance from "@/components/SVGs/brands/new-balance.svg";
-import Nike from "@/components/SVGs/brands/nike.svg";
-import Yeezy from "@/components/SVGs/brands/yeezy.svg";
+import Checkbox from "@/components/svgs/icons/checkmark.svg";
+import Calendar from "@/components/svgs/icons/calendar.svg";
+import Discount from "@/components/svgs/icons/discount.svg";
+import Adidas from "@/components/svgs/brands/adidas.svg";
+import Jordan from "@/components/svgs/brands/jordan.svg";
+import NewBalance from "@/components/svgs/brands/new-balance.svg";
+import Nike from "@/components/svgs/brands/nike.svg";
+import Yeezy from "@/components/svgs/brands/yeezy.svg";
+import CategoryItem from "./CategoryItem";
 
 export default function CategoryBar() {
   const [selectedCategory, setSelectedCategory] = useState(0);
@@ -68,7 +68,7 @@ export default function CategoryBar() {
         <CategoryItem
           key={category.id}
           name={category.name}
-          isActive={selectedCategory == category.id}
+          isActive={selectedCategory === category.id}
           onSelect={() => handlecategoryClick(category.id)}
         >
           {category.icon}

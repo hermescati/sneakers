@@ -1,6 +1,7 @@
 import { sql } from "@vercel/postgres";
 import { unstable_noStore as noStore } from "next/cache";
-import { User, Product, Order, orderItems } from "./definitions";
+// import { User, Order, orderItems } from "./definitions";
+import type { Product } from "./definitions";
 
 export async function fetchProducts() {
   noStore();
@@ -10,7 +11,6 @@ export async function fetchProducts() {
 
     return data.rows;
   } catch (error) {
-    console.error("Database Error:", error);
     throw new Error("Failed to fetch products.");
   }
 }
@@ -28,7 +28,6 @@ export async function fetchProductBySku(sku: string) {
 
     return product[0];
   } catch (error) {
-    console.error("Database Error:", error);
     throw new Error("Failed to fetch product data.");
   }
 }
@@ -42,7 +41,6 @@ export async function fetchNewReleases() {
 
     return data.rows;
   } catch (error) {
-    console.error("Database Error:", error);
     throw new Error("Failed to fetch new releases.");
   }
 }
@@ -56,7 +54,6 @@ export async function fetchUnderRetail() {
 
     return data.rows;
   } catch (error) {
-    console.error("Database Error:", error);
     throw new Error("Failed to fetch products under retail.");
   }
 }
