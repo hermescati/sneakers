@@ -1,5 +1,6 @@
-import { cva, VariantProps } from "class-variance-authority";
-import { ReactNode } from "react";
+import { cva } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
+import type { ReactNode } from "react";
 
 const buttonStyles = cva(
   "flex items-center gap-2 w-full font-bold disabled:opacity-50 disabled:cursor-not-allowed transition-all ease-in-out duration-300",

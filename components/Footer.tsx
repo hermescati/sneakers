@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Button from "./Button";
-import InputField from "./Input/InputField";
 import {
   FaInstagram,
   FaSquareXTwitter,
@@ -8,6 +6,8 @@ import {
   FaTiktok,
   FaPinterest,
 } from "react-icons/fa6";
+import Button from "./Button";
+import InputField from "./Input/InputField";
 
 export default function Footer() {
   const platformStyle = { color: "font-gray-700", fontSize: 20 };

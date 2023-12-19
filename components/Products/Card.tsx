@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/app/lib/definitions";
-import { BrandLogo } from "./BrandLogo";
 import Cart from "@/components/SVGs/icons/shopping-cart.svg";
+import { BrandLogo } from "./BrandLogo";
+import type { Product } from "@/app/lib/definitions";
 
 interface Props {
   product: Product;

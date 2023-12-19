@@ -1,4 +1,5 @@
-import { cva, VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
+import type { VariantProps } from "class-variance-authority";
 
 const inputStyles = cva(
   "w-full border-2 leading-none font-medium focus:outline-none focus:ring-4 focus:ring-offset-0 focus:ring-accent focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all ease-in-out duration-300",

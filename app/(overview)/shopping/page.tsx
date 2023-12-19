@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import CardGrid from "@/components/Products/CardGrid";
 import CategoryBar from "@/components/Filters/CategoryBar";
 import { fetchProducts } from "@/app/lib/data";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Buy Sneakers",

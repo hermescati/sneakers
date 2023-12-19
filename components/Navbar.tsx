@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import Menu from "@/components/SVGs/icons/menu.svg";
 import SearchBar from "./Input/SearchBar";
 import Logo from "./Logo";
 import ProfileMenu from "./Profile/ProfileMenu";
 import ShoppingCart from "./Cart/ShoppingCart";
-import Menu from "@/components/SVGs/icons/menu.svg";
 
 export default function Navbar() {
   return (
